@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* India Craft Bazaar Color Palette */
+    /* Peacock/teal green #0E6F66 → oklch(0.47 0.10 180) */
+    --peacock: 0.47 0.1 180;
+    /* Deep footer purple #2A1746 → oklch(0.22 0.08 285) */
+    --deep-purple: 0.22 0.08 285;
+    /* Brand maroon #7A2C2A → oklch(0.38 0.10 25) */
+    --maroon: 0.38 0.1 25;
+    /* Saffron/orange #E09A2B → oklch(0.72 0.15 65) */
+    --saffron: 0.72 0.15 65;
+    /* Indigo #2C2E73 → oklch(0.28 0.10 265) */
+    --indigo: 0.28 0.1 265;
+    /* Turmeric/mustard #D8A62A → oklch(0.70 0.14 75) */
+    --turmeric: 0.7 0.14 75;
+    /* Crimson/rust #B4492E → oklch(0.52 0.13 35) */
+    --crimson: 0.52 0.13 35;
+    /* Cream/off-white #F5EFE6 → oklch(0.96 0.02 80) */
+    --cream: 0.96 0.02 80;
+    /* Charcoal #1F1F1F → oklch(0.20 0 0) */
+    --charcoal: 0.2 0 0;
+
+    /* Semantic tokens */
+    --background: var(--cream);
+    --foreground: var(--charcoal);
+    --card: 1 0 0;
+    --card-foreground: var(--charcoal);
+    --popover: 1 0 0;
+    --popover-foreground: var(--charcoal);
+    --primary: var(--saffron);
+    --primary-foreground: 1 0 0;
+    --secondary: var(--peacock);
+    --secondary-foreground: 1 0 0;
+    --muted: 0.93 0.01 80;
+    --muted-foreground: 0.5 0 0;
+    --accent: var(--turmeric);
+    --accent-foreground: var(--charcoal);
+    --destructive: var(--crimson);
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.02 80;
+    --input: 0.9 0.02 80;
+    --ring: var(--saffron);
+    --chart-1: var(--saffron);
+    --chart-2: var(--peacock);
+    --chart-3: var(--indigo);
+    --chart-4: var(--crimson);
+    --chart-5: var(--turmeric);
+    --sidebar: 0.22 0.08 285;
+    --sidebar-foreground: 0.96 0.01 80;
+    --sidebar-primary: var(--saffron);
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.3 0.08 285;
+    --sidebar-accent-foreground: 0.96 0.01 80;
+    --sidebar-border: 0.32 0.07 285;
+    --sidebar-ring: var(--saffron);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Playfair Display", serif;
+  }
+  .font-body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  /* Block print border pattern */
+  .block-print-border {
+    background-image: repeating-linear-gradient(
+      90deg,
+      oklch(var(--saffron)) 0px,
+      oklch(var(--saffron)) 4px,
+      oklch(var(--turmeric)) 4px,
+      oklch(var(--turmeric)) 8px,
+      oklch(var(--crimson)) 8px,
+      oklch(var(--crimson)) 12px,
+      oklch(var(--peacock)) 12px,
+      oklch(var(--peacock)) 16px,
+      oklch(var(--indigo)) 16px,
+      oklch(var(--indigo)) 20px
+    );
+    height: 8px;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-stroke-saffron {
+    -webkit-text-stroke: 1px oklch(var(--saffron));
+  }
+}
