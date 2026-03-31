@@ -28,6 +28,8 @@ import {
 } from "@/components/ui/table";
 import { Textarea } from "@/components/ui/textarea";
 import { INDIAN_STATES, SAMPLE_PRODUCTS } from "@/data/indianStates";
+import { useActor } from "@/hooks/useActor";
+import { useInternetIdentity } from "@/hooks/useInternetIdentity";
 import {
   useBanners,
   useBlogPosts,
@@ -43,6 +45,7 @@ import {
   useUpdateOrderStatus,
   useUserOrders,
 } from "@/hooks/useQueries";
+import { useQueryClient } from "@tanstack/react-query";
 import { Navigate } from "@tanstack/react-router";
 import {
   ChevronRight,
@@ -101,8 +104,39 @@ const EMPTY_PRODUCT = {
 
 export default function AdminPanel() {
   const { data: isAdmin, isLoading: adminLoading } = useIsAdmin();
+  const { actor } = useActor();
+  const { identity, login, isLoggingIn } = useInternetIdentity();
+  const queryClient = useQueryClient();
   const [activeTab, setActiveTab] = useState<AdminTab>("dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [claimToken, setClaimToken] = useState("");
+  const [claiming, setClaiming] = useState(false);
+  const [claimError, setClaimError] = useState("");
+  const [claimedAdmin, setClaimedAdmin] = useState(false);
+
+  const handleClaim = async () => {
+    if (!actor) {
+      setClaimError("Backend not ready. Please wait a moment and try again.");
+      return;
+    }
+    if (!claimToken.trim()) return;
+    setClaiming(true);
+    setClaimError("");
+    try {
+      await actor._initializeAccessControlWithSecret(claimToken.trim());
+      await new Promise((resolve) => setTimeout(resolve, 500));
+      await queryClient.invalidateQueries({ queryKey: ["isAdmin"] });
+      await queryClient.refetchQueries({ queryKey: ["isAdmin"] });
+      toast.success("Admin access claimed successfully! Welcome.");
+      setClaimedAdmin(true);
+    } catch (_err: any) {
+      setClaimError(
+        "Invalid token. Please check your admin token and try again.",
+      );
+    } finally {
+      setClaiming(false);
+    }
+  };
 
   if (adminLoading) {
     return (
@@ -115,8 +149,101 @@ export default function AdminPanel() {
     );
   }
 
-  if (!isAdmin) {
-    return <Navigate to="/" />;
+  if (!isAdmin && !claimedAdmin) {
+    if (!identity) {
+      return (
+        <div
+          className="min-h-screen flex items-center justify-center bg-cream"
+          data-ocid="admin.login_state"
+        >
+          <div className="bg-white rounded-2xl shadow-xl p-10 max-w-md w-full text-center border border-saffron/20">
+            <div className="text-5xl mb-4">🛕</div>
+            <h2 className="text-2xl font-display font-bold text-saffron mb-2">
+              Admin Panel
+            </h2>
+            <p className="text-foreground/60 mb-6">
+              Please log in to access the admin panel.
+            </p>
+            <Button
+              onClick={login}
+              disabled={isLoggingIn}
+              className="w-full bg-saffron hover:bg-saffron/90 text-white font-semibold"
+              data-ocid="admin.login_button"
+            >
+              {isLoggingIn ? (
+                <Loader2 className="animate-spin mr-2" size={16} />
+              ) : null}
+              Log In
+            </Button>
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div
+        className="min-h-screen flex items-center justify-center bg-cream"
+        data-ocid="admin.claim_panel"
+      >
+        <div className="bg-white rounded-2xl shadow-xl p-10 max-w-md w-full border border-saffron/20">
+          <div className="text-center mb-6">
+            <div className="text-5xl mb-3">🔐</div>
+            <h2 className="text-2xl font-display font-bold text-saffron mb-1">
+              Claim Admin Access
+            </h2>
+            <p className="text-foreground/60 text-sm">
+              Enter your admin token to claim admin access for this store.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <Label
+                htmlFor="admin-token"
+                className="text-sm font-medium text-foreground/80 mb-1 block"
+              >
+                Admin Token
+              </Label>
+              <Input
+                id="admin-token"
+                type="text"
+                placeholder="Enter your admin token..."
+                value={claimToken}
+                onChange={(e) => setClaimToken(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleClaim()}
+                className="border-saffron/30 focus:border-saffron"
+                data-ocid="admin.token_input"
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                Tip: Copy and paste your token directly to avoid typos.
+              </p>
+            </div>
+            {claimError && (
+              <p
+                className="text-red-500 text-sm bg-red-50 px-3 py-2 rounded-lg"
+                data-ocid="admin.claim_error_state"
+              >
+                {claimError}
+              </p>
+            )}
+            <Button
+              onClick={handleClaim}
+              disabled={claiming || !claimToken.trim()}
+              className="w-full bg-saffron hover:bg-saffron/90 text-white font-semibold"
+              data-ocid="admin.claim_button"
+            >
+              {claiming ? (
+                <>
+                  <Loader2 className="animate-spin mr-2" size={16} />
+                  Claiming...
+                </>
+              ) : (
+                "Claim Admin Access"
+              )}
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
