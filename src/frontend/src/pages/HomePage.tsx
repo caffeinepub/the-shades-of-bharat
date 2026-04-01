@@ -383,8 +383,8 @@ export default function HomePage() {
               />
             </div>
             <p className="text-muted-foreground max-w-lg mx-auto">
-              Explore authentic crafts from every corner of India — 28 states
-              and 8 union territories
+              Explore authentic crafts from every corner of India — all 36
+              states and union territories
             </p>
           </div>
 

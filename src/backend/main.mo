@@ -23,6 +23,7 @@ actor {
   type FestivalCollectionId = Text;
   type BlogPostId = Text;
   type BannerId = Text;
+  type ArtisanId = Text;
 
   var nextProductId : Nat = 1;
   var nextOrderId : Nat = 1;
@@ -30,6 +31,7 @@ actor {
   var nextFestivalCollectionId : Nat = 1;
   var nextBlogPostId : Nat = 1;
   var nextBannerId : Nat = 1;
+  var nextArtisanId : Nat = 1;
 
   let accessControlState = AccessControl.initState();
   include MixinAuthorization(accessControlState);
@@ -42,6 +44,9 @@ actor {
   let banners = Map.empty<BannerId, Banner>();
   let wishlists = Map.empty<Principal, Set.Set<ProductId>>();
   let userProfiles = Map.empty<Principal, UserProfile>();
+  let artisans = Map.empty<ArtisanId, Artisan>();
+  var bankAccount : ?BankAccount = null;
+  var marqueeGreetings : [Text] = [];
 
   public type UserProfile = {
     name : Text;
@@ -129,6 +134,31 @@ actor {
     order : Int;
   };
 
+  public type BankAccount = {
+    accountHolderName : Text;
+    accountNumber : Text;
+    ifscCode : Text;
+    bankName : Text;
+    branch : Text;
+    upiId : Text;
+  };
+
+  public type Artisan = {
+    id : ArtisanId;
+    name : Text;
+    state : Text;
+    craft : Text;
+    speciality : Text;
+    story : Text;
+    experience : Nat;
+    quote : Text;
+    products : [Text];
+    awards : ?Text;
+    culturalNote : Text;
+    imageUrl : Text;
+    createdAt : Int;
+  };
+
   public type ProductFilter = {
     state : ?Text;
     category : ?Text;
@@ -199,6 +229,15 @@ actor {
 
   public query ({ caller }) func getProductReviews(productId : ProductId) : async [Review] {
     reviews.values().toArray().filter(func(r) { r.productId == productId });
+  };
+
+  // Artisan queries - public
+  public query func listArtisans() : async [Artisan] {
+    artisans.values().toArray();
+  };
+
+  public query func getArtisan(id : ArtisanId) : async ?Artisan {
+    artisans.get(id);
   };
 
   // Authenticated user queries
@@ -450,6 +489,59 @@ actor {
     };
   };
 
+  // Artisan CRUD (Admin-only write, public read)
+  public shared ({ caller }) func createArtisan(input : Artisan) : async ArtisanId {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can create artisans");
+    };
+    let id = nextArtisanId.toText();
+    let artisan : Artisan = {
+      input with
+      id;
+      createdAt = Time.now();
+    };
+    artisans.add(id, artisan);
+    nextArtisanId += 1;
+    id;
+  };
+
+  public shared ({ caller }) func updateArtisan(id : ArtisanId, input : Artisan) : async Artisan {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can update artisans");
+    };
+    switch (artisans.get(id)) {
+      case (null) { Runtime.trap("Artisan not found") };
+      case (?existing) {
+        let updated : Artisan = {
+          existing with
+          name = input.name;
+          state = input.state;
+          craft = input.craft;
+          speciality = input.speciality;
+          story = input.story;
+          experience = input.experience;
+          quote = input.quote;
+          products = input.products;
+          awards = input.awards;
+          culturalNote = input.culturalNote;
+          imageUrl = input.imageUrl;
+        };
+        artisans.add(id, updated);
+        updated;
+      };
+    };
+  };
+
+  public shared ({ caller }) func deleteArtisan(id : ArtisanId) : async () {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can delete artisans");
+    };
+    if (not artisans.containsKey(id)) {
+      Runtime.trap("Artisan not found");
+    };
+    artisans.remove(id);
+  };
+
   // Authenticated user functions
   public shared ({ caller }) func placeOrder(items : [OrderItem], total : Nat, shippingAddress : Text) : async OrderId {
     if (not (AccessControl.hasPermission(accessControlState, caller, #user))) {
@@ -533,6 +625,33 @@ actor {
         wishlists.add(caller, wishlist);
       };
     };
+  };
+
+  // Bank Account Settings (Admin-only)
+  public shared ({ caller }) func saveBankAccount(input : BankAccount) : async () {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can save bank account details");
+    };
+    bankAccount := ?input;
+  };
+
+  public query ({ caller }) func getBankAccount() : async ?BankAccount {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can view bank account details");
+    };
+    bankAccount;
+  };
+
+  // Marquee Greetings (Admin-editable)
+  public shared ({ caller }) func saveMarqueeGreetings(greetings : [Text]) : async () {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can save marquee greetings");
+    };
+    marqueeGreetings := greetings;
+  };
+
+  public query func getMarqueeGreetings() : async [Text] {
+    marqueeGreetings;
   };
 
   func matchesFilter(product : Product, filter : ProductFilter) : Bool {

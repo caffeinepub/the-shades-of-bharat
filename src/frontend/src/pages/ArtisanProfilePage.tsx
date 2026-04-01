@@ -1,8 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 import { ARTISANS } from "@/data/artisans";
 import { INDIAN_STATES } from "@/data/indianStates";
+import { useArtisan } from "@/hooks/useQueries";
 import { Link, useParams } from "@tanstack/react-router";
 import { ArrowLeft, Award, BookOpen, Gem, ShoppingBag } from "lucide-react";
 
@@ -17,7 +19,31 @@ function getInitials(name: string) {
 
 export default function ArtisanProfilePage() {
   const { artisanId } = useParams({ from: "/artisan/$artisanId" });
-  const artisan = ARTISANS.find((a) => a.id === artisanId);
+  const { data: backendArtisan, isLoading } = useArtisan(artisanId);
+
+  // Use backend data if available, otherwise fall back to static
+  const raw = backendArtisan ?? ARTISANS.find((a) => a.id === artisanId);
+  const artisan = raw
+    ? {
+        ...raw,
+        experience:
+          typeof raw.experience === "bigint"
+            ? Number(raw.experience)
+            : raw.experience,
+      }
+    : null;
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-cream" data-ocid="artisan.loading_state">
+        <div className="py-16 bg-stone-200 animate-pulse" />
+        <div className="max-w-4xl mx-auto px-4 py-12 space-y-4">
+          <Skeleton className="h-40 w-full" />
+          <Skeleton className="h-40 w-full" />
+        </div>
+      </main>
+    );
+  }
 
   if (!artisan) {
     return (
@@ -60,10 +86,18 @@ export default function ArtisanProfilePage() {
           </Link>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
-            {/* Avatar */}
-            <div className="w-32 h-32 rounded-full bg-white/20 border-4 border-white/40 flex items-center justify-center text-4xl font-bold text-white shadow-2xl flex-shrink-0">
-              {getInitials(artisan.name)}
-            </div>
+            {/* Avatar or image */}
+            {(artisan as any).imageUrl ? (
+              <img
+                src={(artisan as any).imageUrl}
+                alt={artisan.name}
+                className="w-32 h-32 rounded-full object-cover border-4 border-white/40 shadow-2xl flex-shrink-0"
+              />
+            ) : (
+              <div className="w-32 h-32 rounded-full bg-white/20 border-4 border-white/40 flex items-center justify-center text-4xl font-bold text-white shadow-2xl flex-shrink-0">
+                {getInitials(artisan.name)}
+              </div>
+            )}
 
             {/* Info */}
             <div className="flex-1 text-center sm:text-left">

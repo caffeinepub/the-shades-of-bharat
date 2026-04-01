@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useCart } from "@/context/CartContext";
 import { useInternetIdentity } from "@/hooks/useInternetIdentity";
+import { useGetMarqueeGreetings } from "@/hooks/useQueries";
 import { Link, useNavigate } from "@tanstack/react-router";
 import {
   ChevronDown,
@@ -49,6 +50,7 @@ export function Header() {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { data: dynamicGreetings } = useGetMarqueeGreetings();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,7 +63,11 @@ export function Header() {
     }
   };
 
-  const marqueeContent = [...MARQUEE_GREETINGS, ...MARQUEE_GREETINGS].join(
+  const activeGreetings =
+    dynamicGreetings && dynamicGreetings.length > 0
+      ? dynamicGreetings
+      : MARQUEE_GREETINGS;
+  const marqueeContent = [...activeGreetings, ...activeGreetings].join(
     "  \u2728  ",
   );
 

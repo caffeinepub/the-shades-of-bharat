@@ -6,7 +6,7 @@ import { useCart } from "@/context/CartContext";
 import { useInternetIdentity } from "@/hooks/useInternetIdentity";
 import { usePlaceOrder } from "@/hooks/useQueries";
 import { useNavigate } from "@tanstack/react-router";
-import { Loader2 } from "lucide-react";
+import { IndianRupee, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -226,9 +226,21 @@ export default function CheckoutPage() {
                     <span>₹{grandTotal.toLocaleString("en-IN")}</span>
                   </div>
                 </div>
+
+                {/* UPI payment note */}
+                <div className="flex items-center gap-2 mt-4 px-3 py-2.5 bg-saffron/8 border border-saffron/20 rounded-lg">
+                  <IndianRupee
+                    size={13}
+                    className="text-saffron flex-shrink-0"
+                  />
+                  <p className="text-xs text-muted-foreground leading-snug">
+                    Payment via UPI after order confirmation
+                  </p>
+                </div>
+
                 <Button
                   type="submit"
-                  className="w-full mt-6 bg-saffron hover:bg-turmeric text-white h-12 text-base font-semibold"
+                  className="w-full mt-4 bg-saffron hover:bg-turmeric text-white h-12 text-base font-semibold"
                   disabled={placeOrder.isPending}
                   data-ocid="checkout.submit_button"
                 >

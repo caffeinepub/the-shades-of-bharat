@@ -380,3 +380,136 @@ export function useDeleteBlogPost() {
     },
   });
 }
+
+export function useGetBankAccount() {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["bankAccount"],
+    queryFn: async () => {
+      if (!actor) return null;
+      return (actor as any).getBankAccount() as Promise<{
+        accountHolderName: string;
+        accountNumber: string;
+        ifscCode: string;
+        bankName: string;
+        branch: string;
+        upiId: string;
+      } | null>;
+    },
+    enabled: !!actor && !isFetching,
+  });
+}
+
+export function useSaveBankAccount() {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (data: {
+      accountHolderName: string;
+      accountNumber: string;
+      ifscCode: string;
+      bankName: string;
+      branch: string;
+      upiId: string;
+    }) => {
+      if (!actor) throw new Error("Not connected");
+      return (actor as any).saveBankAccount(data) as Promise<void>;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["bankAccount"] });
+    },
+  });
+}
+
+export function useGetMarqueeGreetings() {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["marqueeGreetings"],
+    queryFn: async () => {
+      if (!actor) return [] as string[];
+      return (actor as any).getMarqueeGreetings() as Promise<string[]>;
+    },
+    enabled: !!actor && !isFetching,
+  });
+}
+
+export function useSaveMarqueeGreetings() {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (greetings: string[]) => {
+      if (!actor) throw new Error("Not connected");
+      return (actor as any).saveMarqueeGreetings(greetings) as Promise<void>;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["marqueeGreetings"] });
+    },
+  });
+}
+
+// Artisan hooks
+export function useArtisans() {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["artisans"],
+    queryFn: async () => {
+      if (!actor) return [] as any[];
+      return (actor as any).listArtisans() as Promise<any[]>;
+    },
+    enabled: !!actor && !isFetching,
+  });
+}
+
+export function useArtisan(id: string) {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["artisan", id],
+    queryFn: async () => {
+      if (!actor) return null;
+      return (actor as any).getArtisan(id) as Promise<any | null>;
+    },
+    enabled: !!actor && !isFetching && !!id,
+  });
+}
+
+export function useCreateArtisan() {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (input: any) => {
+      if (!actor) throw new Error("Not connected");
+      return (actor as any).createArtisan(input) as Promise<string>;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["artisans"] });
+    },
+  });
+}
+
+export function useUpdateArtisan() {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async ({ id, input }: { id: string; input: any }) => {
+      if (!actor) throw new Error("Not connected");
+      return (actor as any).updateArtisan(id, input) as Promise<any>;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["artisans"] });
+    },
+  });
+}
+
+export function useDeleteArtisan() {
+  const { actor } = useActor();
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (id: string) => {
+      if (!actor) throw new Error("Not connected");
+      return (actor as any).deleteArtisan(id) as Promise<void>;
+    },
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["artisans"] });
+    },
+  });
+}

@@ -42,6 +42,8 @@ actor {
   let banners = Map.empty<BannerId, Banner>();
   let wishlists = Map.empty<Principal, Set.Set<ProductId>>();
   let userProfiles = Map.empty<Principal, UserProfile>();
+  var bankAccount : ?BankAccount = null;
+  var marqueeGreetings : [Text] = [];
 
   public type UserProfile = {
     name : Text;
@@ -128,6 +130,16 @@ actor {
     isActive : Bool;
     order : Int;
   };
+
+  public type BankAccount = {
+    accountHolderName : Text;
+    accountNumber : Text;
+    ifscCode : Text;
+    bankName : Text;
+    branch : Text;
+    upiId : Text;
+  };
+
 
   public type ProductFilter = {
     state : ?Text;
@@ -534,6 +546,35 @@ actor {
       };
     };
   };
+
+
+  // Bank Account Settings (Admin-only)
+  public shared ({ caller }) func saveBankAccount(input : BankAccount) : async () {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can save bank account details");
+    };
+    bankAccount := ?input;
+  };
+
+  public query ({ caller }) func getBankAccount() : async ?BankAccount {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can view bank account details");
+    };
+    bankAccount;
+  };
+
+  // Marquee Greetings (Admin-editable)
+  public shared ({ caller }) func saveMarqueeGreetings(greetings : [Text]) : async () {
+    if (not AccessControl.isAdmin(accessControlState, caller)) {
+      Runtime.trap("Unauthorized: Only admins can save marquee greetings");
+    };
+    marqueeGreetings := greetings;
+  };
+
+  public query func getMarqueeGreetings() : async [Text] {
+    marqueeGreetings;
+  };
+
 
   func matchesFilter(product : Product, filter : ProductFilter) : Bool {
     switch (filter.state) {

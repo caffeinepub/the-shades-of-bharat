@@ -82,6 +82,7 @@ export interface FestivalCollection {
 export type FestivalCollectionId = string;
 export type ReviewId = string;
 export type ProductId = string;
+export type ArtisanId = string;
 export interface Product {
     id: ProductId;
     originalPrice: bigint;
@@ -103,6 +104,29 @@ export interface Product {
     price: bigint;
     careInstructions: string;
 }
+export interface Artisan {
+    id: ArtisanId;
+    name: string;
+    state: string;
+    craft: string;
+    speciality: string;
+    story: string;
+    experience: bigint;
+    quote: string;
+    products: Array<string>;
+    awards?: string;
+    culturalNote: string;
+    imageUrl: string;
+    createdAt: bigint;
+}
+export interface BankAccount {
+    accountHolderName: string;
+    accountNumber: string;
+    ifscCode: string;
+    bankName: string;
+    branch: string;
+    upiId: string;
+}
 export enum UserRole {
     admin = "admin",
     user = "user",
@@ -116,10 +140,12 @@ export interface backendInterface {
     createBlogPost(input: BlogPost): Promise<BlogPostId>;
     createFestivalCollection(input: FestivalCollection): Promise<FestivalCollectionId>;
     createProduct(input: Product): Promise<ProductId>;
+    createArtisan(input: Artisan): Promise<ArtisanId>;
     deleteBanner(id: BannerId): Promise<void>;
     deleteBlogPost(id: BlogPostId): Promise<void>;
     deleteFestivalCollection(id: FestivalCollectionId): Promise<void>;
     deleteProduct(id: ProductId): Promise<void>;
+    deleteArtisan(id: ArtisanId): Promise<void>;
     getCallerUserProfile(): Promise<UserProfile | null>;
     getCallerUserRole(): Promise<UserRole>;
     getOrder(id: OrderId): Promise<Order | null>;
@@ -133,6 +159,8 @@ export interface backendInterface {
     listBlogPosts(): Promise<Array<BlogPost>>;
     listFestivalCollections(): Promise<Array<FestivalCollection>>;
     listProducts(filter: ProductFilter): Promise<Array<Product>>;
+    listArtisans(): Promise<Array<Artisan>>;
+    getArtisan(id: ArtisanId): Promise<Artisan | null>;
     placeGuestOrder(guestEmail: string, items: Array<OrderItem>, total: bigint, shippingAddress: string): Promise<OrderId>;
     placeOrder(items: Array<OrderItem>, total: bigint, shippingAddress: string): Promise<OrderId>;
     removeFromWishlist(productId: ProductId): Promise<void>;
@@ -142,4 +170,9 @@ export interface backendInterface {
     updateFestivalCollection(id: FestivalCollectionId, input: FestivalCollection): Promise<FestivalCollection>;
     updateOrderStatus(id: OrderId, status: string, trackingNumber: string | null): Promise<Order>;
     updateProduct(id: ProductId, input: Product): Promise<Product>;
+    updateArtisan(id: ArtisanId, input: Artisan): Promise<Artisan>;
+    getBankAccount(): Promise<BankAccount | null>;
+    saveBankAccount(input: BankAccount): Promise<void>;
+    getMarqueeGreetings(): Promise<Array<string>>;
+    saveMarqueeGreetings(greetings: Array<string>): Promise<void>;
 }
