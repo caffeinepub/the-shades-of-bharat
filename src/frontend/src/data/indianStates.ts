@@ -9,6 +9,9 @@ export interface IndianState {
   pattern: string;
   culturalHighlights?: string[];
   divinityTitle?: string;
+  history: string;
+  culturalRoots: string;
+  geographicalIdentity: string;
 }
 
 export const INDIAN_STATES: IndianState[] = [
@@ -34,6 +37,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Amaravati — ancient Buddhist capital and sacred seat of Dharma",
       "Puttaparthi — birthplace of Sri Sathya Sai Baba, the great saint and humanitarian",
     ],
+    history:
+      "Andhra Pradesh is a land steeped in ancient glory, having been ruled by the Satavahana dynasty, the great Ikshvaku kings, and later the magnificent Vijayanagara Empire — one of the greatest Hindu kingdoms in history. The region nurtured Telugu literature, philosophy, and the arts, giving birth to the celebrated poet-king Krishnadevaraya. Ancient Buddhist centres at Amaravati and Nagarjunakonda flourished here, making this coast a meeting point of spiritual wisdom and cultural excellence.",
+    culturalRoots:
+      "The cultural soul of Andhra Pradesh is expressed through the intricate Kalamkari hand-painted cotton fabrics, the vibrant Kuchipudi classical dance, and the exquisite Kondapalli wooden toys. Nirmal lacquerware carries forward centuries-old artisan traditions, while Uppada Jamdani silk weaves stand as testimony to the weavers' mastery. The Tirupati tradition, the kolam art, and the rich Carnatic music heritage all weave together to form an inimitable cultural tapestry.",
+    geographicalIdentity:
+      "Andhra Pradesh stretches along the southeastern coast of India, embracing the Bay of Bengal with a long, fertile shoreline. The Eastern Ghats form a rugged backbone, while the Krishna and Godavari river deltas create one of India's most productive agricultural landscapes. The Nallamala forest ranges shelter ancient caves, and the Srisailam dam graces the Krishna gorge — making this a land of extraordinary geographical diversity, from coastal plains to forested hills.",
   },
   {
     name: "Arunachal Pradesh",
@@ -50,6 +59,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Tawang Monastery — the largest Buddhist monastery in India, a profound spiritual centre",
       "Home of the Monpa tribe who have preserved ancient Buddhist scriptures for centuries",
     ],
+    history:
+      "Arunachal Pradesh, the Land of the Dawn-Lit Mountains, has been home to diverse tribal civilizations since ancient times. The Monpa, Nyishi, Adi, and Apatani peoples maintained rich oral histories and warrior traditions. The Tawang Monastery, founded in the 17th century, became a beacon of Tibetan Buddhist scholarship. The McMahon Line defines its northeastern border, and this state has been India's sentinel in the easternmost Himalayas, where the first rays of the Indian sun fall each morning.",
+    culturalRoots:
+      "With 26 major tribal groups, Arunachal Pradesh is a living museum of indigenous culture. The Monpa people are renowned for their Thangka Buddhist paintings and handwoven carpets. Bamboo and cane weaving form the basis of everyday artistic expression across tribes. Warrior ornaments, beaded jewellery, and hand-embroidered shawls each carry the distinct identity of their tribe. The Donyi-Polo (Sun-Moon) animist tradition gives the region a unique spiritual dimension distinct from mainstream India.",
+    geographicalIdentity:
+      "Arunachal Pradesh is India's easternmost state, cradling the headwaters of the Brahmaputra (Siang) and numerous other mighty rivers. The state rises from subtropical plains in the south to glacial peaks over 7,000 metres in the north. The Himalayan landscape encompasses dense forests, high-altitude meadows, glacial lakes, and dramatic gorges. Sharing borders with Bhutan, China, and Myanmar, this biodiversity hotspot receives the first sunrise in India.",
   },
   {
     name: "Assam",
@@ -74,6 +89,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Majuli Island — the world's largest river island, a living centre of Vaishnavite monasteries (Satras) and classical arts",
       "Land of the one-horned rhinoceros and Kaziranga — a spiritual relationship between the Assamese people and nature",
     ],
+    history:
+      "Assam was ruled for six remarkable centuries by the Ahom dynasty, who resisted Mughal invasions 17 times — an extraordinary feat in Indian history. The ancient Kamakhya Temple atop Nilachal Hill is one of India's most sacred Shakti Peethas. The medieval Vaishnavite saint Srimanta Sankardeva transformed Assamese society through Bhakti literature and the Sattriya cultural tradition. Assam has been a crossroads of civilizations, connecting Southeast Asia with the Indian subcontinent.",
+    culturalRoots:
+      "The golden Muga silk of Assam is unique to the world — woven from the silk of wild semi-cultivated silkworms that feed on Soalu plants. The Mekhela Chador is Assam's graceful two-piece drape worn by women on festive occasions. The Jaapi, a traditional conical hat woven from bamboo and palm leaves, is an iconic symbol of Assamese identity. Bihu, the joyous harvest festival with its energetic folk dance, celebrates the Assamese bond with nature and the agricultural cycle.",
+    geographicalIdentity:
+      "Assam occupies the broad Brahmaputra valley, one of the world's largest river valleys, flanked by hills on all sides. The river Brahmaputra is a force of nature — wide, mighty, and sacred — that has shaped the civilisation of this land. Assam is home to Kaziranga National Park, where the Indian one-horned rhinoceros roams in its greatest numbers. The emerald tea gardens of Assam produce some of the world's most prized teas, and Majuli river island is the world's largest inhabited river island.",
   },
   {
     name: "Bihar",
@@ -98,6 +119,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Sita's birthplace at Sitamarhi — this sacred land is woven into the Ramayana itself",
       "Aryabhata, Chanakya, and countless Rishis and Maharishis were born and flourished on this holy soil",
     ],
+    history:
+      "Bihar is perhaps the most historically profound state in India. It was here that the ancient Magadha Empire rose to give birth to some of the world's greatest empires — the Maurya dynasty under Chandragupta Maurya and the great Asoka. Bodh Gaya, where Siddhartha Gautama attained enlightenment under the Bodhi tree, is the holiest site for over 500 million Buddhists worldwide. Nalanda University, founded in the 5th century CE, was the world's first great residential university, attracting scholars from as far as China, Korea, and Persia.",
+    culturalRoots:
+      "Madhubani art is Bihar's most celebrated gift to world culture — a vivid tradition of painting using natural pigments on walls and paper, depicting mythological stories and nature's beauty. Sikki grass basketry, Sujni embroidery quilts, and Tikuli glass painting are other remarkable craft traditions. Chhath Puja, Bihar's most important festival honouring the Sun God Surya, is one of India's oldest living Vedic traditions, observed with extraordinary devotion by millions.",
+    geographicalIdentity:
+      "Bihar lies in the heart of the Gangetic plains, one of the most fertile river basins in the world. The Ganga flows majestically through the state, receiving the Gandak, Son, and Kosi rivers. The Rajgir hills rise as ancient rocky outcrops — sacred to Buddhism and Jainism. The terai region in the north borders Nepal, while the Chota Nagpur plateau defines the southern edge. This fertile land has fed civilizations for millennia, earning its place as the granary of ancient India.",
   },
   {
     name: "Chhattisgarh",
@@ -121,6 +148,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Sirpur — ancient Buddhist and Hindu pilgrimage site with magnificent 6th-century temples",
       "Land of ancient tribal wisdom: Bastar's Gond people have preserved nature-worship traditions for thousands of years",
     ],
+    history:
+      "Chhattisgarh was the ancient Dakshin Kosala — a region mentioned in the Ramayana and Mahabharata. The Kalachuri dynasty ruled here for centuries, and the region witnessed the flourishing of tribal kingdoms with distinctive governance traditions. The Bastar region particularly preserved indigenous Gond, Halba, and other tribal cultures across millennia. Chhattisgarh was carved from Madhya Pradesh in 2000 as a separate state to honour its unique tribal identity and cultural heritage.",
+    culturalRoots:
+      "Chhattisgarh's most distinctive cultural contribution is the Dokra lost-wax metalcasting tradition, which produces bold, geometric tribal figurines of extraordinary beauty. Gond tribal painting uses a distinctive dotwork technique to depict nature, deities, and village life with remarkable spiritual intensity. The Bastar Dussehra is the world's longest festival, lasting 75 days, and is completely distinct from mainstream Dussehra in its tribal ritual character. Panthi dance and Raut Nacha are vibrant folk art forms of this region.",
+    geographicalIdentity:
+      "Chhattisgarh occupies the upper Mahanadi basin and forms the transition between the Deccan plateau and the central Indian highlands. The state is one of India's most forested — over 44% of its area is under forest cover, making it a precious biodiversity reservoir. The Bastar region is famous for its dense sal forests, waterfalls like Chitrakoot (the Niagara of India), and the unspoilt tribal landscape. The Hasdeo and Indravati rivers wind through this verdant heartland.",
   },
   {
     name: "Goa",
@@ -142,6 +175,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Shanta Durga Temple — the beloved goddess who brought peace between Lord Shiva and Lord Vishnu",
       "Goa's ancient Hindu temples predate Portuguese arrival by over a thousand years, preserving Konkani spiritual heritage",
     ],
+    history:
+      "Goa has a rich pre-Portuguese history as the seat of the Hindu Kadamba dynasty and later the Vijayanagara Empire. Portuguese arrived in 1510 and ruled for 451 years, creating a unique Indo-Portuguese civilisation of profound cultural depth. The liberation of Goa in 1961 through India's military operation was a pivotal moment in postcolonial Indian history. Despite the long colonial period, Goa's Hindu traditions, festivals, and temple culture survived and thrived.",
+    culturalRoots:
+      "Goa's cultural identity is a fascinating blend of ancient Konkani Hindu traditions and Portuguese colonial influence. The Azulejo decorative tile art adorns old mansions and creates a distinctive visual character. Coconut shell craft, filigree jewellery, and handwoven cotton fabrics reflect indigenous artistic traditions. The Tiatr theatre in Konkani is a living dramatic tradition. Carnival, Shigmo (Holi), and Ganesh Chaturthi are all celebrated with equal fervour, reflecting Goa's syncretic spirit.",
+    geographicalIdentity:
+      "Goa, India's smallest state, is nestled on the Konkan coast with the Western Ghats forming a dramatic eastern backdrop. The Mandovi and Zuari rivers create a fertile coastal plain before merging with the Arabian Sea. Goa's iconic landscape of white sand beaches, laterite cliffs, swaying coconut palms, and Portuguese-era churches is utterly distinctive. The Western Ghats here are a UNESCO World Heritage Site, harbouring extraordinary biodiversity including endemic species of flora and fauna.",
   },
   {
     name: "Gujarat",
@@ -167,6 +206,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Narsinh Mehta — the great saint-poet of Gujarat who composed Vaishnav Jan To, beloved by Gandhiji",
       "Navratri in Gujarat is a living celebration of Shakti — nine nights of devotion to the Divine Mother",
     ],
+    history:
+      "Gujarat is one of India's oldest civilized regions — the Indus Valley Civilization flourished at Dholavira and Lothal on Gujarati soil over 5,000 years ago. The Solanki dynasty built the glorious Sun Temple at Modhera and the Rani ki Vav stepwell, both UNESCO World Heritage Sites. The Somnath temple, one of the twelve Jyotirlingas of Lord Shiva, stands on this sacred coastline. Gujarat is also the birthplace of Mahatma Gandhi, whose spirit of non-violent resistance transformed the world.",
+    culturalRoots:
+      "Gujarat's craft traditions are among the most diverse and exquisite in all of India. Kutch embroidery with its intricate mirror-work patterns has achieved global recognition. Patola double-ikat silk weaving from Patan is a two-thousand-year-old tradition requiring extraordinary skill. Bandhani tie-dye produces stunning geometric patterns in vivid colours. Rogan art — a rare craft practised by just one family in Kutch — creates extraordinary textile paintings. Garba and Dandiya Raas dances are Gujarat's great gifts to India's festive traditions.",
+    geographicalIdentity:
+      "Gujarat has India's longest coastline at over 1,600 km, embracing the Arabian Sea. The Rann of Kutch — the world's largest salt desert — transforms into a magical white expanse in winter. The Gir Forest is the last home of the Asiatic lion. The fertile plains of central Gujarat are watered by the Sabarmati, Narmada, and Mahi rivers. The Kathiawar peninsula (Saurashtra) juts boldly into the sea, and the Banni grasslands support unique pastoral communities.",
   },
   {
     name: "Haryana",
@@ -190,6 +235,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Brahma Sarovar — the holy lake at Kurukshetra where sages have performed rituals since Vedic times",
       "Land of saints and warriors — birthplace of Adi Shankaracharya's disciples and home to countless Vedic scholars",
     ],
+    history:
+      "Haryana is the sacred heartland of ancient Vedic civilization. Kurukshetra, where the great battle of the Mahabharata was fought and Lord Krishna delivered the Bhagavad Gita to Arjuna, lies in this state. Rakhigarhi, one of the largest Indus Valley Civilization sites ever discovered, is located in Haryana, providing evidence of urban life over 5,000 years ago. This land nurtured the Vedic rishis and has been central to the spiritual and philosophical consciousness of India.",
+    culturalRoots:
+      "Haryana's most celebrated craft tradition is Phulkari embroidery — the flower-work needlecraft that transforms plain cotton into vibrant, patterned textiles using bright silk threads. Pottery from various centres across the state reflects ancient terracotta traditions. Saang folk theatre is a distinctive theatrical tradition unique to Haryana, combining music, dance, and drama. Wrestling has deep cultural roots here — the Dangal tradition is a matter of regional pride and has produced numerous Olympic champions.",
+    geographicalIdentity:
+      "Haryana occupies the heart of the Indo-Gangetic plain and is surrounded by Delhi, Punjab, Rajasthan, and Uttar Pradesh — making it a true crossroads of north India. The Yamuna river forms its eastern boundary and the Ghaggar flows through its northwestern region. The Aravalli hills rise in the south, and the Shivalik foothills mark the northern edge. The state's flat, fertile plains and canal irrigation network make it one of India's most agriculturally productive regions.",
   },
   {
     name: "Himachal Pradesh",
@@ -214,6 +265,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Shri Renuka Ji — the sacred lake associated with the mother of Parashurama, revered across Himachal",
       "The Kullu Dussehra is a unique celebration where hundreds of local deities (devtas) descend to pay homage to Lord Raghunath (Ram)",
     ],
+    history:
+      "Himachal Pradesh has been inhabited since prehistoric times. The region was part of various ancient kingdoms including the Kullu, Kangra (Katoch dynasty — one of the oldest royal dynasties in the world), Nurpur, and Sirmaur. Shimla became the summer capital of British India, shaping its colonial-era architecture. The region has preserved a unique blend of Pahari, Tibetan Buddhist, and Hindu Rajput traditions across its many valley kingdoms.",
+    culturalRoots:
+      "Himachal Pradesh's craft heritage centers on the exquisite Kullu shawls — handwoven on traditional looms with intricate geometric patterns in vivid mountain colours. Chamba Rumal is a masterpiece of embroidery, depicting scenes from Hindu mythology with a distinctive technique where both sides of the fabric look identical. Himachali wooden crafts include elaborately carved temple doors, furniture, and decorative panels. Thangka paintings from Buddhist monasteries in Lahaul and Spiti represent a living spiritual art tradition.",
+    geographicalIdentity:
+      "Himachal Pradesh rises dramatically from the Shivalik foothills to the high Himalayan peaks, encompassing an extraordinary range of landscapes. The Spiti and Lahaul valleys in the north are high-altitude cold deserts. The Beas, Ravi, and Sutlej rivers carve magnificent gorges through the mountains. The Rohtang Pass and Baralacha La are iconic high-altitude crossings. Apple orchards, snow-covered peaks, ancient deodar forests, and Buddhist monasteries perched on cliffsides create the quintessential Himachali landscape.",
   },
   {
     name: "Jharkhand",
@@ -237,6 +294,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Parasnath Hill — the most sacred pilgrimage site for Jains, named after the 23rd Tirthankara",
       "The Santhali, Mundari, and Ho tribes of Jharkhand have preserved ancient songs, dances, and earth-worship traditions for millennia",
     ],
+    history:
+      "Jharkhand — the Land of Forests — has been home to Adivasi communities for millennia. The Munda, Santali, Oraon, and Ho peoples maintain ancient traditions that predate recorded history. Birsa Munda, the revered tribal freedom fighter who led the Ulgulan (great tumult) uprising against British rule in 1900, is a towering figure of Indian resistance history. Jharkhand was carved from Bihar in 2000 to honour tribal identity and the rich cultural heritage of the Chota Nagpur plateau.",
+    culturalRoots:
+      "Jharkhand's Sohrai and Khovar paintings are ancient cave-wall art traditions — used to decorate homes during harvest and marriage festivals respectively. Dokra metal craft produces animistic tribal figurines of extraordinary power and beauty. Stone carving from Hazaribagh creates iconic tribal forms. Chhau dance — a spectacular martial dance form using elaborate mythological masks and acrobatic movements — originated here and is now a UNESCO Intangible Cultural Heritage. Jharcraft encompasses the state's diverse artisan traditions.",
+    geographicalIdentity:
+      "Jharkhand sits on the ancient Chota Nagpur plateau, a geologically ancient land of mineral-rich forests and rolling highlands. The Damodar river flows east through the industrial heartland, while the Subarnarekha and Koel rivers drain other regions. The Netarhat plateau offers spectacular views and is nicknamed the Queen of Chotanagpur. Betla National Park shelters elephants, tigers, and leopards. The state's forests are ecologically vital — part of India's most intact forest landscape in the central Indian belt.",
   },
   {
     name: "Karnataka",
@@ -261,6 +324,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Kukke Subramanya — the sacred abode of Lord Kartikeya (Subramanya), son of Lord Shiva",
       "Basavanna — the 12th-century saint-philosopher who championed social equality and devotion to Lord Shiva (Lingayat tradition)",
     ],
+    history:
+      "Karnataka has been the seat of some of India's greatest dynasties. The Kadamba dynasty in the 4th century CE were the first to use Kannada as an official language. The Hoysala Empire produced the architectural masterpieces at Belur, Halebidu, and Somnathapura — their star-shaped temple platforms and minutely carved sculptures representing a pinnacle of Indian artistic achievement. The Vijayanagara Empire at Hampi was the last great Hindu empire, whose ruins are now a UNESCO World Heritage Site.",
+    culturalRoots:
+      "Karnataka's Bidriware — a metalcraft using zinc, copper, and silver inlay — originated in Bidar and produces stunning dark-silver geometric artworks unique in the world. Mysore silk weaving produces lustrous, heavy silk sarees with gold zari borders of unmatched elegance. Channapatna lacquer toys in red, green, and yellow are delightful craft objects made by artisans using lathe techniques. Yakshagana, a traditional theatre form combining elaborate costumes, music, and dance-drama, is Karnataka's most spectacular performing art.",
+    geographicalIdentity:
+      "Karnataka spans from the Western Ghats — a UNESCO World Heritage Biodiversity Hotspot — to the Deccan plateau and the Arabian Sea coast. The Ghats receive India's heaviest rainfall and are the source of the Cauvery, Tungabhadra, and Krishna rivers. The coffee and spice estates of Coorg and Chikmagalur produce some of the world's finest plantation crops. The coast features unique estuary landscapes and the historic port towns of Mangalore and Udupi, renowned for their distinct cuisine and temple traditions.",
   },
   {
     name: "Kerala",
@@ -284,6 +353,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Sabarimala — the sacred abode of Lord Ayyappa, attracting crores of devotees in an extraordinary display of Bhakti",
       "Guruvayur — the 'Dwarka of the South', sacred abode of Lord Krishna (Guruvayurappan)",
     ],
+    history:
+      "Kerala has one of the world's oldest documented histories of international trade — Roman, Arab, Chinese, and Jewish merchants traded on its spice coast for over two millennia. The ancient kingdom of Travancore under the royal family was renowned for its progressive governance. Vasco da Gama landed in Kozhikode in 1498, inaugurating the Portuguese spice trade era. Kerala achieved near-universal literacy by the 1980s, becoming a global model for human development.",
+    culturalRoots:
+      "Kathakali is Kerala's most iconic cultural expression — an elaborate dance-drama with extraordinary facial makeup, towering headdresses, and stylised gestures narrating stories from the Hindu epics. Kalaripayattu, the ancient martial art of Kerala, is considered one of the oldest fighting systems in existence. Kasavu sarees — white cotton with golden borders — are worn on Onam and embody Kerala's aesthetic simplicity. Mohiniyattam, Theyyam, and Ottamthullal are other classical performance traditions.",
+    geographicalIdentity:
+      "Kerala is a narrow strip of land between the Western Ghats and the Arabian Sea, remarkable for its extraordinary density of waterbodies. The famous backwaters — a network of lagoons, lakes, canals, and rivers — form a unique aquatic landscape. Forty-four rivers flow from the Ghats to the sea in a state only 580 km long. The Ghats here host Silent Valley, Periyar, and other protected forests. Coconut palms line every road, river, and coast, giving Kerala its distinctive visual identity as God's Own Country.",
   },
   {
     name: "Madhya Pradesh",
@@ -308,6 +383,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Chitrakoot — where Lord Ram, Mata Sita, and Lakshmana spent their years of exile, a most sacred Vaishnava tirtha",
       "Land of Sant Kabir, Tansen (the musical genius), and countless Rishis and Mahatmas",
     ],
+    history:
+      "Madhya Pradesh — the Heart of India — has been at the centre of subcontinental history since ancient times. The Maurya Emperor Asoka administered the Ujjain region before his transformation. Sanchi Stupa, built under Asoka's patronage, is the oldest stone structure in India and a UNESCO World Heritage Site. The Khajuraho temples, built by the Chandela dynasty, are among the world's greatest medieval architectural achievements. Bhimbetka rock shelters contain paintings dating to 30,000 years ago — among the earliest evidence of human artistic expression in South Asia.",
+    culturalRoots:
+      "Gond tribal painting is Madhya Pradesh's most celebrated contemporary art form — using a distinctive technique of filling outlined drawings with intricate dots, lines, and patterns to depict the natural world with spiritual reverence. Chanderi silk, woven in the ancient town of Chanderi, produces gossamer-light silk sarees of extraordinary delicacy. Maheshwari weaves from Maheshwar combine silk and cotton in distinctive bordered designs. Bagh prints from the Bagh river valley use natural dyes and wooden blocks to create deep, earthy-coloured textile patterns.",
+    geographicalIdentity:
+      "Madhya Pradesh is India's largest state by area and forms the geographical heart of the subcontinent. The Vindhya and Satpura ranges divide the state into distinct landscapes. The Narmada river — one of India's most sacred rivers — flows westward through the Vindhya-Satpura rift valley. The Chambal, Betwa, and Son rivers drain other regions. Panna and Bandhavgarh national parks shelter Bengal tigers. The state encompasses ancient forests, volcanic landscapes, rock-cut cave systems, and fertile river plains.",
   },
   {
     name: "Maharashtra",
@@ -332,6 +413,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Shirdi Sai Baba — the great saint of Shirdi who embodied the unity of all faiths. Millions seek his blessings daily",
       "Trimbakeshwar Jyotirlinga (Nashik) — source of the sacred Godavari river and one of the 12 Jyotirlingas of Lord Shiva",
     ],
+    history:
+      "Maharashtra's history is dominated by the heroic legacy of Chhatrapati Shivaji Maharaj, who founded the Maratha Empire in the 17th century and established a model of Hindavi Swarajya (self-rule). The Peshwa rulers extended Maratha power across the subcontinent. Bombay became the most important colonial port city and later India's financial capital. The social reform movements of the 19th century — led by Mahatma Jyotirao Phule, Savitribai Phule, and B.R. Ambedkar — originated here, transforming Indian society.",
+    culturalRoots:
+      "Warli tribal art from the Dahanu-Palghar region uses geometric shapes to depict the life of the Warli tribe with remarkable minimalist power. Paithani silk sarees from Paithan are woven with silk and gold wefts, creating jewel-like peacock and lotus motifs. Kolhapuri sandals, hand-crafted in vegetable-tanned leather, have been worn for over 500 years. Lavani dance performance and Tamasha folk theatre are Maharashtra's vibrant popular performing arts. Ganesh Chaturthi, introduced as a public festival by Tilak, unites the entire state.",
+    geographicalIdentity:
+      "Maharashtra spans the Deccan plateau, the Konkan coast, and the Vidarbha region, encompassing one of India's most diverse geographical territories. The Sahyadri (Western Ghats) form a dramatic escarpment, with ancient hill forts — Raigad, Pratapgad, Sinhagad — standing as monuments to Maratha military heritage. The Godavari and Krishna rivers water the plateau. Mumbai's harbour and Konkan's coastal cliffs face the Arabian Sea. The semi-arid Vidarbha in the east and the lush Konkan represent opposite extremes within the same state.",
   },
   {
     name: "Manipur",
@@ -354,6 +441,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Ras Leela — Manipur's classical Ras Leela dance depicting Lord Krishna and the Gopis is a UNESCO-recognized living tradition of extraordinary beauty",
       "Kangla Fort — the ancient sacred seat of Manipuri kings, believed to be the abode of the deity Pakhangba",
     ],
+    history:
+      "Manipur — the Jewel of India — was an independent Hindu kingdom for centuries under the Meitei monarchy. The Kangla Fort in Imphal was the royal seat for nearly two millennia. Manipur has a unique distinction as the birthplace of polo — the ancient Sagol Kangjei game played on Manipuri ponies is considered polo's origin. The Second World War Battle of Kohima-Imphal (1944) was fought partly on Manipuri soil and was pivotal in stopping the Japanese advance into India.",
+    culturalRoots:
+      "Manipuri classical dance is one of India's eight classical dance forms, renowned for its lyrical grace, Vaishnavite devotional themes, and distinctive costume including the barrel skirt (potloi). The Kauna reed from Loktak Lake is woven into baskets, mats, and decorative crafts unique to Manipur. Handloom weaving is central to Manipuri women's identity — every Meitei woman traditionally weaves, and the patterns carry clan identity. Longpi black pottery, made without a wheel using hand-burnishing, is a unique craft of the Tangkhul Naga community.",
+    geographicalIdentity:
+      "Manipur is a valley surrounded by hills — the Imphal valley sits at 790 metres altitude, enclosed by verdant ranges. Loktak Lake, with its unique phumdis (floating biomass islands) and the world's only floating national park, is Manipur's most distinctive geographical feature. The Barak river drains the south. The state borders Myanmar, making it a natural gateway to Southeast Asia. Dzukou Valley on the Nagaland border is famous for its seasonal flower carpet — one of northeast India's most spectacular natural sights.",
   },
   {
     name: "Meghalaya",
@@ -369,6 +462,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Meghalaya means 'Abode of Clouds' — a mystical land where the Khasi, Jaintia, and Garo tribes have worshipped nature as the divine for thousands of years",
       "The sacred groves (Law Kyntang) of the Khasi people are among the oldest ecological and spiritual conservation traditions in the world",
     ],
+    history:
+      "Meghalaya — the Abode of Clouds — was carved from Assam in 1972 to give expression to the aspirations of the Khasi, Garo, and Jaintia peoples. The Khasi hills were administered by the Syiem (chief) system — one of the oldest functioning democratic governance systems in Asia. The Jaintia kingdom was a significant regional power, and the Garo kingdom in the west had distinct traditions. The British established hill stations in this region, drawn by the cool climate and dramatic landscapes.",
+    culturalRoots:
+      "Meghalaya is renowned as one of the few matrilineal societies in the world — among the Khasi and Garo peoples, descent and property pass through the female line. Cane and bamboo weaving produces distinctive baskets, furniture, and architectural elements. The Nongkrem dance festival of the Khasi people is a spectacular thanksgiving ritual. Woven shawls with their distinctive patterns mark tribal identity. The living root bridges — grown from the aerial roots of rubber trees — are a unique form of bio-engineering found nowhere else on Earth.",
+    geographicalIdentity:
+      "Meghalaya sits on the southern rim of the Shillong plateau, an ancient geological formation that tilts dramatically southward toward the Bangladesh plains. This geography creates some of the world's highest rainfall — Mawsynram and Cherrapunji both hold records for the world's highest annual precipitation. Waterfalls cascade from the plateau edge in breathtaking cascades. Caves carved by underground rivers, including the longest cave systems in South Asia, lie beneath the plateau.",
   },
   {
     name: "Mizoram",
@@ -384,6 +483,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Mizoram — 'Land of the Highland People', where the Mizo community has preserved ancient folk songs, oral traditions, and communal living values",
       "The Tlawmngaihna — a Mizo moral code of selfless service, generosity, and duty — reflects the universal values of Dharma",
     ],
+    history:
+      "Mizoram — Land of the Mizos — has a complex history of independence and eventual integration with India. The Lushai (Mizo) tribes were fierce warriors. Christianity arrived with Welsh missionaries in the late 19th century and transformed Mizo society profoundly. The Mizo National Front insurgency (1966-1986) ended with the landmark Mizoram Peace Accord — considered one of the most successful conflict-resolution agreements in India's history.",
+    culturalRoots:
+      "Puan textile weaving is Mizoram's signature craft — women weave elaborate shawls with intricate coloured geometric patterns on traditional looms, each design carrying social and cultural meaning. The Cheraw bamboo dance, where performers step gracefully between pairs of bamboo poles tapped together rhythmically, is one of India's most spectacular folk dances. Chapchar Kut festival, celebrating the completion of jungle clearing for farming, is Mizoram's most joyful festival. Bamboo craft — furniture, musical instruments, household items — is central to daily life.",
+    geographicalIdentity:
+      "Mizoram is a landlocked state in northeastern India, dominated entirely by north-south oriented hills and valleys. The Blue Mountain (Phawngpui), at 2,157 metres, is the state's highest peak and a place of ethereal beauty. The Tlawng river and Tuivai river drain the region. Mizoram shares extensive borders with Bangladesh and Myanmar. The bamboo forests that cover much of the state burst into flower every 48 years — a phenomenon called Mautam — historically triggering dramatic ecological changes.",
   },
   {
     name: "Nagaland",
@@ -404,6 +509,12 @@ export const INDIAN_STATES: IndianState[] = [
       "The Naga tribes — among the most vibrant warrior cultures of South Asia — celebrate the Hornbill Festival, a spectacular showcase of music, dance, and heritage",
       "Each of the 16 Naga tribes has distinct traditions, head-gear, and ceremonial shawls that carry centuries of ancestral stories",
     ],
+    history:
+      "Nagaland is home to some of India's most distinctive warrior peoples — the Angami, Ao, Lotha, Sumi, Konyak, and other Naga tribes each maintained independent village republics with strong self-governance traditions. The headhunting tradition was a ritual affirmation of warrior identity and only ceased in the mid-20th century. The Battle of Kohima (1944) — a decisive WWII battle — was fought in the very streets of the city. Nagaland joined the Indian Union in 1963. The Hornbill Festival showcases all Naga tribes' traditions simultaneously.",
+    culturalRoots:
+      "Naga shawls are each tribe's most distinctive cultural marker — the Sumi, Ao, Angami, and Konyak communities each weave shawls with unique colours, patterns, and symbolic meanings. A warrior's shawl records his history of deeds. Beaded jewellery using glass beads, hornbill feathers, and shells creates elaborate pectorals, head-pieces, and armlets of extraordinary visual power. Wood carving is used for the Morung (bachelor's dormitory) structures, adorned with carved depictions of warriors, animals, and fertility symbols.",
+    geographicalIdentity:
+      "Nagaland occupies the Patkai (Naga) Hills in northeastern India, with altitudes ranging from 200 metres in the plains to over 3,800 metres at Saramati, the highest peak. The Dzukou Valley — a high-altitude grassland valley on the Nagaland-Manipur border — blooms with rare endemic flowers and is among India's most pristine landscapes. The Doyang river and its tributaries drain the western valleys. Nagaland borders Myanmar, and the Naga people straddle this border, sharing cultural ties across two nations.",
   },
   {
     name: "Odisha",
@@ -429,6 +540,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Odisha — Utkal Pradesh — is the land of Bhakti poets and saints. Sri Jayadeva, composer of the Gita Govinda (the most beautiful devotional poem on Lord Krishna), was born here",
       "Pancha Tirtha of Puri: Jagannath Temple, Gundicha Temple, Lokanath Temple, Sakshi Gopal, and Alarnath — a land soaked in divine grace",
     ],
+    history:
+      "Odisha's ancient history is written in stone, temple art, and epic battles. The Kalinga War of 261 BCE, where Emperor Asoka witnessed such devastating bloodshed that he converted to Buddhism and Ahimsa, took place on Odishan soil — an event that shaped world history. The Konark Sun Temple, built in the 13th century, is a UNESCO World Heritage Site and one of the world's greatest architectural achievements. Jagannath Puri is one of India's Char Dhams, drawing millions of pilgrims annually.",
+    culturalRoots:
+      "Pattachitra — the ancient cloth-scroll painting tradition of Odisha — creates vivid, intricately detailed images of Hindu deities, particularly Lord Jagannath, using mineral pigments and a unique gum lacquer finish. Sambalpuri ikat weaving creates textile masterpieces where threads are dyed before weaving to create geometric patterns that appear simultaneously on both sides. Pipili appliqué uses brightly coloured fabric pieces to create festival canopies and decorations. Odissi classical dance, with its characteristic tribhanga (thrice-bent) posture, is one of India's most lyrical dance forms.",
+    geographicalIdentity:
+      "Odisha's 480 km Bay of Bengal coastline is dotted with ancient temples, fishing villages, and turtle nesting beaches — the Olive Ridley turtles arrive in their hundreds of thousands at Gahirmatha and Rushikulya beaches. Chilika Lake is Asia's largest brackish water lagoon, a Ramsar Wetland of International Importance. The Eastern Ghats form the western highlands. The Mahanadi delta creates one of India's largest deltaic plains. The sacred triangle of Puri-Konark-Bhubaneswar is among the world's densest concentrations of ancient temple architecture.",
   },
   {
     name: "Punjab",
@@ -452,6 +569,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Land of the Ten Sikh Gurus — each Guru sacrificed and served to uphold Dharma and protect the weak",
       "Anandpur Sahib — where Guru Gobind Singh Ji established the Khalsa Panth, the community of the pure and the brave",
     ],
+    history:
+      "Punjab — Land of Five Rivers — is one of the world's oldest continuously inhabited regions. The Indus Valley Civilization flourished here at Harappa. The Punjab has been the gateway of India, witness to Alexander's invasion, the Maurya and Gupta empires, and later the establishment of the great Sikh religion. The ten Sikh Gurus — from Guru Nanak Dev Ji to Guru Gobind Singh Ji — transformed Punjab and gave the world a new spiritual tradition of equality, service (Seva), and devotion. The Partition of 1947 divided Punjab with immeasurable human cost.",
+    culturalRoots:
+      "Phulkari (flower work) embroidery is Punjab's most beloved craft tradition — women embroider entire shawls and dupattas with vibrant silk thread flowers, creating dazzling textile gardens. Punjabi Jutti footwear — handcrafted in leather with golden thread embroidery — is worn at weddings and festive occasions across North India. The Dhol — the two-headed barrel drum — is the heartbeat of Punjab's music, driving Bhangra dance with irresistible energy. The Golden Temple's langar (community kitchen), serving free meals to 100,000 people daily, is one of humanity's greatest acts of collective service.",
+    geographicalIdentity:
+      "Punjab sits on the great alluvial plain watered by the five rivers — Jhelum, Chenab, Ravi, Beas, and Sutlej (though three now flow through Pakistan after Partition). The fertile land is intensively cultivated with wheat, rice, and sugarcane, earning Punjab the title Granary of India. The Shivalik Hills rise along the northern edge. Amritsar, with the Golden Temple, is the spiritual centre of the Sikh faith. The Wagah Border ceremony is both a dividing line and a daily celebration of Indo-Pak cultural kinship.",
   },
   {
     name: "Rajasthan",
@@ -478,6 +601,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Nathdwara — the sacred abode of Shrinathji (Lord Krishna as a child), the most important Vaishnava shrine of Rajasthan",
       "Land of Rajput Kshatriya Dharma — the valorous warriors of Rajasthan upheld Dharma through centuries of sacrifice",
     ],
+    history:
+      "Rajasthan — the Land of Kings — was home to the most illustrious Rajput dynasties: the Mewar house of Sisodias (with Maharana Pratap's legendary resistance), the Marwar Rathores of Jodhpur, the Kachwaha rulers of Amber-Jaipur, and the Bhati rulers of Jaisalmer. These warrior clans built hill forts of extraordinary grandeur — Chittorgarh, Mehrangarh, Amber, Kumbhalgarh — that still stand as monuments to martial pride and architectural genius. Rajasthan's princely states were the last to accede to the Indian Union in 1949.",
+    culturalRoots:
+      "Rajasthan's artistic traditions are as vibrant and opulent as its desert landscape. Blue Pottery from Jaipur — made from quartz stone paste rather than clay — creates distinctive azure-and-white decorative objects. Miniature painting in the Mewar, Marwar, and Kishangarh schools depicts royal courts, hunting scenes, and love stories in exquisite detail. Kathputli string puppetry is a living storytelling tradition. Bandhani tie-dye and leheriya wave-patterns create the vivid textiles of Rajasthani dress. Ghoomar dance is the state's most graceful cultural expression.",
+    geographicalIdentity:
+      "Rajasthan is India's largest state by area, dominated by the Thar Desert — South Asia's only major desert. The Aravalli mountain range, one of the world's oldest mountain systems, runs diagonally across the state. The Sambhar Salt Lake is India's largest inland salt lake. Jaisalmer's golden sandstone city and Jodhpur's blue city are built directly from the desert landscape. The eastern districts receive monsoon rains and have fertile agricultural land along the Chambal and Banas rivers.",
   },
   {
     name: "Sikkim",
@@ -500,6 +629,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Sikkim is considered sacred to Guru Padmasambhava (Guru Rinpoche) — the great saint who brought Vajrayana Buddhism to Tibet and the Himalayas",
       "Kangchenjunga — the world's third-highest peak is considered the guardian deity of Sikkim by the local people",
     ],
+    history:
+      "Sikkim was an independent Buddhist kingdom — the Chogyal (Divine Ruler) dynasty of the Namgyal family ruled since 1642 from their capital at Gangtok. The kingdom was a Himalayan crossroads, connecting India with Tibet and Bhutan along ancient trade routes. The Lepcha, the indigenous people of Sikkim, are considered the original inhabitants of the region. Sikkim joined the Indian Union in 1975 after a referendum, becoming India's 22nd state. It made history again in 2016 by becoming India's first fully organic state.",
+    culturalRoots:
+      "Thangka paintings — detailed Buddhist scroll paintings depicting deities, mandalas, and cosmological maps — are Sikkim's most significant artistic tradition. Trained monks and lay artists spend months creating a single Thangka, which serves as a meditation aid. Lepcha weaving uses fine wool to create intricate patterned textiles in black, white, and red. Bamboo craft permeates daily life. Rumtek Monastery, one of the most important monasteries of Tibetan Buddhism, and the Enchey Monastery are centres of living Buddhist culture.",
+    geographicalIdentity:
+      "Sikkim is among India's smallest states but contains some of its most dramatic geography. Kangchenjunga, at 8,586 metres, is the world's third highest peak and Sikkim's presiding deity — the mountain is considered sacred. The Teesta river runs through the state from north to south, carving deep valleys. High-altitude glacial lakes — Tsomgo, Gurudongmar, and Khecheopalri — are among the most sacred water bodies in the Himalayas. The state ranges from tropical forests at 300 metres to permanent glaciers above 8,000 metres.",
   },
   {
     name: "Tamil Nadu",
@@ -523,6 +658,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Thiruvalluvar — the great Tamil saint and philosopher who composed the Thirukkural — one of humanity's greatest ethical scriptures",
       "The Nayanmars and Alwars — Tamil Bhakti saints who composed sublime hymns to Lord Shiva and Lord Vishnu between the 6th–9th centuries, shaping the devotional soul of Bharat",
     ],
+    history:
+      "Tamil Nadu is one of the world's oldest living civilizations — Sangam literature, composed over 2,000 years ago, represents one of the ancient world's great literary traditions. The Chola Empire (9th-13th centuries CE) commanded a naval empire that reached Southeast Asia, establishing Hindu temples in Bali, Cambodia, and Thailand. The Pallava dynasty created the Mahabalipuram shore temples, and the Pandya and Chera kingdoms ruled southern and western Tamil regions. Tamil is the world's oldest living classical language.",
+    culturalRoots:
+      "Kanjeevaram silk (Kanchipuram) is considered the queen of Indian silks — woven with pure mulberry silk and real gold zari, these sarees are passed as heirlooms across generations. Tanjore painting uses a distinctive technique of raised gesso reliefs, glass gem embellishments, and gold foil to create icons of luminous, jewelled beauty. Chola bronze casting — lost-wax bronze sculpture depicting Nataraja and other deities — is considered one of the world's greatest sculptural traditions. Kolam floor art (rice-powder rangoli) is practised daily before every home.",
+    geographicalIdentity:
+      "Tamil Nadu occupies India's southernmost tip, with the Coromandel Coast facing the Bay of Bengal and the Gulf of Mannar separating it from Sri Lanka. The Western Ghats rise abruptly on the western border, creating the Nilgiri Hills (Blue Mountains) and the tea-covered Anamalai ranges. The Cauvery river delta in the Thanjavur region is the rice bowl of South India. The ancient temple towns of Madurai, Tiruchirapalli, Kanchipuram, and Chidambaram create a unique landscape where sacred architecture defines urban space.",
   },
   {
     name: "Telangana",
@@ -546,6 +687,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Thousand Pillar Temple (Warangal) — a magnificent 12th-century Kakatiya shrine to Lord Shiva, Vishnu, and Surya",
       "Ramappa Temple — a UNESCO World Heritage Site, a stunning 13th-century Shiva temple built by the Kakatiya dynasty",
     ],
+    history:
+      "Telangana has a history shaped by the great Deccan Plateau civilisations. The Satavahana dynasty ruled from Dharanikota. The Kakatiya dynasty (1083-1323 CE), ruling from Warangal, built the magnificent Ramappa Temple — a UNESCO World Heritage Site. The Qutb Shahi sultans and later the Asaf Jah Nizams made Hyderabad one of the world's wealthiest princely states. Telangana was carved from Andhra Pradesh in 2014 as India's 29th state, fulfilling a decades-long struggle.",
+    culturalRoots:
+      "Pochampally Ikat (Bhoodan Pochampally) weaving is Telangana's most internationally celebrated craft — geometric patterns created through resist-dyeing the warp and weft before weaving, producing complex designs that blur and blend beautifully. Nirmal furniture and painting use a distinctive lacquerware technique on rosewood, creating painted panels of haunting delicacy. Bidriware — zinc alloy inlaid with silver — is crafted in this region. Perini Thandavam is an ancient warrior dance revived from the Kakatiya period.",
+    geographicalIdentity:
+      "Telangana sits on the Deccan plateau, one of the world's ancient geological formations. The Krishna and Godavari rivers bisect the state, and the Nagarjunasagar dam on the Krishna is one of India's largest multipurpose dams. The Nallamala forest ranges shelter the Amrabad Tiger Reserve. The Godavari river's Papikondalu gorge is one of India's most dramatic river landscapes. The semi-arid landscape, rocky outcrops, and ancient stepwells define Telangana's distinctive terrain.",
   },
   {
     name: "Tripura",
@@ -561,6 +708,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Maa Tripura Sundari — the state itself is named after the Goddess. The Tripura Sundari Temple (Udaipur) is one of the 51 Shakti Peethas, a most sacred abode of the Divine Mother",
       "Unakoti — an ancient hill site with massive rock-cut sculptures of Lord Shiva and other deities, believed to date back over a thousand years",
     ],
+    history:
+      "Tripura was ruled by the Manikya dynasty — one of India's longest-reigning royal families — for nearly 1,300 years. The Ujjayanta Palace in Agartala, built in 1901, stands as a monument to this royal heritage. The state was surrounded by East Pakistan (now Bangladesh) on three sides, giving it a complex partition history. Tripura merged with India in 1949. Unakoti rock carvings — massive rock-cut relief sculptures of Shiva and other deities in a forest setting — represent ancient devotional art of extraordinary scale.",
+    culturalRoots:
+      "The Risa textile is Tripura's most culturally significant craft — a traditional textile woven by Tripuri women that serves as a symbol of cultural identity and is worn for every important ceremony. Bamboo and cane crafts are deeply integrated into daily life and architecture. The Garia Puja is Tripura's most important festival — a harvest thanksgiving to Lord Garia that involves elaborate pole-dancing rituals. Tribal weaves and ornaments of the Tripuri, Reang, and Jamatia communities maintain pre-colonial indigenous aesthetics.",
+    geographicalIdentity:
+      "Tripura is a small state almost entirely surrounded by Bangladesh on the north, west, and south, with only a narrow land corridor connecting it to other Indian states through Assam and Mizoram. The Gomati, Haora, and Dhalai rivers drain the state. The state's interior consists of four north-south oriented hill ranges separated by river valleys. Sipahijola Wildlife Sanctuary protects the state's rich biodiversity. The Unakoti hills in the north are home to ancient rock carvings of extraordinary scale.",
   },
   {
     name: "Uttar Pradesh",
@@ -588,6 +741,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Land of Rishis, Saints, and Mahatmas: Sant Kabir, Tulsidas (Ramcharitmanas), Mirabai, Raskhan, Surdas — this sacred soil has nurtured the greatest Bhakti saints of Bharat",
       "Sarnath — where Lord Buddha gave his first sermon after Enlightenment, setting the Wheel of Dharma in motion",
     ],
+    history:
+      "Uttar Pradesh is the spiritual and cultural heartland of India. Varanasi — known as Kashi — is the world's oldest continuously inhabited city, where Lord Shiva himself is said to reside. Ayodhya is the sacred birthplace of Lord Ram, and Mathura-Vrindavan is the divine playground of Lord Krishna. The ancient Prayagraj Kumbh Mela at the Ganga-Yamuna-Saraswati confluence is the world's largest human gathering. UP has been central to every major chapter of Indian civilisation — Mauryan, Gupta, Medieval, and modern.",
+    culturalRoots:
+      "Banarasi silk weaving is India's most prestigious textile tradition — woven on traditional pit looms in Varanasi with real gold and silver zari, these sarees are indispensable for Hindu weddings. Chikankari embroidery from Lucknow — white thread on white muslin creating raised floral patterns — is known as the poetry of cloth. Brassware from Moradabad has been exported globally for centuries. Zardozi gold thread embroidery adorns royal garments and furnishings. Kathak classical dance originated in Uttar Pradesh's temple and court traditions.",
+    geographicalIdentity:
+      "Uttar Pradesh occupies the central Gangetic plain — one of the world's most densely populated and agriculturally productive regions. The Ganga-Yamuna Doab (the fertile land between the two rivers) is India's most intensively farmed landscape. The Terai region along the Nepal border is a subtropical forest and grassland zone sheltering tigers, elephants, and the one-horned rhinoceros. The Vindhya hills mark the southern edge. The Ganga receives the Yamuna at Prayagraj and many other rivers as it flows eastward toward the sea.",
   },
   {
     name: "Uttarakhand",
@@ -613,6 +772,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Badrinath — the sacred abode of Lord Vishnu (Badrinarayan), one of the Char Dham and a Divya Desam, set in the majestic Himalayan peaks",
       "Land of Rishis and ashrams: The Himalayas of Uttarakhand have been the forest-hermitage (tapovana) of countless Maharishis since Vedic times — Vyasa, Vashishtha, Vishwamitra, and more",
     ],
+    history:
+      "Uttarakhand — Dev Bhoomi (Land of the Gods) — is one of India's most spiritually charged regions. The Char Dham pilgrimage centres (Badrinath, Kedarnath, Gangotri, Yamunotri) have drawn devotees for millennia. The ancient kingdoms of Kumaon (Chand dynasty) and Garhwal (Parmar dynasty) maintained distinctive hill civilisations. The region was a major centre of Sanskrit learning and Vedic scholarship. India's first national park was established here in 1936 in the Corbett forest.",
+    culturalRoots:
+      "Aipan folk art is Uttarakhand's most distinctive cultural expression — red-and-white geometric patterns drawn on floors, walls, and paper for religious ceremonies, each design associated with specific deities and occasions. Ringaal (ringal) bamboo craft produces functional and decorative items from the mountain bamboo. Pahadi jewellery uses silver, coral, and turquoise in bold designs that reflect the mountain aesthetic. The Uttarakhandi topi (cap) and woolen shawls woven in local patterns are symbols of regional identity.",
+    geographicalIdentity:
+      "Uttarakhand encompasses both the Garhwal and Kumaon Himalayan ranges and is the source of the Ganga (from Gangotri glacier), the Yamuna (from Yamunotri glacier), and the Alaknanda — India's most sacred rivers. Nainital, Mussoorie, and other hill stations were established as British summer retreats. Corbett National Park is India's oldest tiger reserve. Valley of Flowers National Park is a UNESCO World Heritage Site famous for its seasonal alpine flower meadow. The state ranges from subtropical Shivalik foothills to Himalayan peaks over 7,000 metres.",
   },
   {
     name: "West Bengal",
@@ -641,6 +806,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Rabindranath Tagore — the poet-sage of Bengal who gave Bharat its National Anthem and won the Nobel Prize. His Gitanjali is a offering of songs to the Divine",
       "Vishwa Bharati, Shantiniketan — Tagore's sacred educational community, blending ancient Gurukul wisdom with the arts",
     ],
+    history:
+      "West Bengal was the epicentre of India's cultural renaissance. Calcutta served as the capital of British India until 1911, making it the most cosmopolitan and intellectually vibrant city of the colonial era. Rabindranath Tagore — poet, philosopher, artist, and songwriter — won the Nobel Prize for Literature in 1913 from this soil, the first Asian to do so. The Bengal Renaissance of the 19th century produced India's modern social reform movement. Partition of 1947 divided Bengal with profound human consequences.",
+    culturalRoots:
+      "Kantha embroidery — simple running stitches on layered fabric creating the most vibrant, narrative embroidery in India — is Bengal's most beloved textile tradition. Shantiniketan leather goods combine simple forms with elegant tooled leather designs. Dokra metal casting from the Bankura-Bishnupur region creates bold, earthy tribal figurines using the ancient lost-wax process. Terracotta jewellery from Bankura uses the famous horse motif. The Durga Puja festival, celebrated with extraordinary community-created art installations, has been declared a UNESCO Intangible Cultural Heritage.",
+    geographicalIdentity:
+      "West Bengal runs from the Himalayan peaks of Darjeeling in the north to the mangrove delta of the Sundarbans in the south — one of the most dramatic north-south geographical transitions in India. The Sundarbans, a UNESCO World Heritage Site, is the world's largest mangrove forest and home of the Royal Bengal Tiger. The Hooghly river flows through Kolkata. The eastern Himalayan foothills produce Darjeeling's famous tea. The state is bounded by Bangladesh to the east and northeast.",
   },
   // Union Territories
   {
@@ -657,6 +828,12 @@ export const INDIAN_STATES: IndianState[] = [
       "The Andaman Islands were home to the freedom fighters imprisoned in the Cellular Jail (Kala Pani) — a symbol of sacrifice and patriotism in Bharat's independence struggle",
       "The Jarawa and Sentinelese tribes are among the last uncontacted peoples on earth — living witnesses to humanity's ancient roots",
     ],
+    history:
+      "The Andaman and Nicobar Islands were home to the ancient Andamanese, Onge, Jarawa, and Sentinelese peoples — among the world's last Paleolithic hunter-gatherer communities. The British used the islands as a penal colony, and the Cellular Jail (Kala Pani) in Port Blair became the site of heroic imprisonment of Indian freedom fighters. The islands were occupied by Japan during World War II. Netaji Subhas Chandra Bose hoisted the Indian Tricolour here in 1943 for the first time on Indian soil.",
+    culturalRoots:
+      "The Nicobari people make coconut shell crafts, model outrigger canoes, and traditional woven pandanus leaf products with deep artisanal skill. The Onge and Andamanese peoples' bark cloth and wooden carvings represent ancient indigenous artistic traditions. Shell craft using the beautiful conch, cowrie, and coral shells of the archipelago produces jewellery and decorative objects unique to these islands. The Karen community maintains distinctive weaving and boat-building traditions.",
+    geographicalIdentity:
+      "The Andaman and Nicobar Islands are an archipelago of 572 islands stretching 800 km in the Bay of Bengal, far closer to Southeast Asia than to mainland India. The islands are the exposed peaks of a submerged mountain range. Tropical rainforests cover most of the islands. The coral reefs surrounding them are among Asia's most diverse and intact marine ecosystems. The Nicobar Islands in the south approach the equator, creating a genuinely tropical climate of extraordinary biodiversity.",
   },
   {
     name: "Chandigarh",
@@ -672,6 +849,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Chandigarh is named after Maa Chandi Devi, whose ancient temple stands here",
       "The city embodies the Punjabi spirit of hard work, generosity, and celebration — deeply rooted in the Sikh ethos of Seva (selfless service)",
     ],
+    history:
+      "Chandigarh has a unique origin story — it was built as a new capital for Indian Punjab after Partition severed Lahore from India. Prime Minister Nehru commissioned the Swiss-French architect Le Corbusier to design an entirely new planned city. The Capitol Complex is now a UNESCO World Heritage Site for its modernist architectural significance. Chandigarh serves as the joint capital of both Punjab and Haryana and is also a Union Territory — a unique constitutional arrangement.",
+    culturalRoots:
+      "Chandigarh's craft traditions draw from its surrounding Punjab and Haryana hinterland — Phulkari embroidery, brassware, and terracotta pottery are primary craft forms. The Rock Garden by Nek Chand — a 40-acre sculpture garden made entirely from recycled industrial and urban waste — is a unique work of outsider art that has achieved global fame. The Government Museum houses an important collection of Gandhara sculpture and Pahari miniature paintings from the surrounding region.",
+    geographicalIdentity:
+      "Chandigarh sits at the foot of the Shivalik Hills, on the banks of the seasonal Sukhna Choe which has been dammed to form Sukhna Lake. The city is planned on a grid of sectors (neighbourhoods), with each sector self-sufficient in its amenities. The Ghaggar river flows nearby. The Morni Hills to the northeast offer accessible hill terrain. The city is equidistant from Delhi and Amritsar, making it a natural service and commercial hub for the region.",
   },
   {
     name: "Dadra & NH",
@@ -682,6 +865,12 @@ export const INDIAN_STATES: IndianState[] = [
     bgColor: "#0E6F66",
     type: "ut",
     pattern: "warli",
+    history:
+      "Dadra and Nagar Haveli was a Portuguese territory until its liberation by Indian nationalist volunteers in 1954 — notably before the main liberation of Daman and Diu in 1961. The enclave is surrounded by Gujarat and Maharashtra and has been home to the Warli tribal community for millennia. The territory was merged with Daman and Diu into a single Union Territory in 2020. The Warli people's ancient relationship with the forest landscape defines the region's identity.",
+    culturalRoots:
+      "Warli tribal art is the most celebrated cultural tradition of this region — geometric paintings using white on red-ochre backgrounds, depicting village life, nature, and spiritual ceremonies with timeless simplicity. Bamboo and cane weaving produce distinctive baskets and furniture. Portuguese-influenced pottery and tile work reflect the colonial era's artistic legacy. Traditional tribal textiles and ornaments of the Warli and Dhodia communities maintain pre-colonial indigenous aesthetics of great beauty.",
+    geographicalIdentity:
+      "Dadra and Nagar Haveli is an inland enclave territory surrounded by Gujarat and Maharashtra, with tribal forests and the Daman Ganga river flowing through it. The forested interior shelters the Warli and Dhodia tribal communities. The territory has a tropical landscape with dense forests and river valleys distinct from the coastal Daman and Diu territories with which it is now administratively combined.",
   },
   {
     name: "Daman & Diu",
@@ -692,6 +881,12 @@ export const INDIAN_STATES: IndianState[] = [
     bgColor: "#D8A62A",
     type: "ut",
     pattern: "geometric",
+    history:
+      "Daman and Diu were Portuguese naval strongholds for over four centuries, serving as crucial ports on the trade routes between India and Europe. Diu's fort, built by the Portuguese in 1535, is a landmark of colonial-era military architecture. The territory was liberated by India in 1961 and was merged with Dadra and Nagar Haveli in 2020. The Portuguese legacy is visible in the churches, forts, and St. Paul's Church in Diu, which features some of the finest Portuguese Baroque architecture outside Europe.",
+    culturalRoots:
+      "The craft traditions of Daman and Diu blend Portuguese colonial influence with Gujarati and coastal Indian indigenous traditions. Bamboo and shell crafts reflect the coastal lifestyle. Traditional fishing communities maintain distinctive boat-building and net-weaving traditions. Portuguese-influenced decorative tiles and religious iconography blend with Hindu temple craft. The fishing community's folk songs and dances reflect centuries of coastal trade and multicultural exchange.",
+    geographicalIdentity:
+      "Daman is a coastal town on the Gulf of Khambhat with a narrow stretch of Arabian Sea beach. Diu is a small island separated from the Gujarat coast by a narrow channel, with a dramatic fort, sea-facing bastions, and sandy beaches. The Daman Ganga river meets the sea here. The territory's landscape is entirely coastal — flat, windswept, and salt-spray-tinged — with a distinctive Portuguese-era urban character overlaid on a Gujarati cultural substrate.",
   },
   {
     name: "Delhi",
@@ -708,6 +903,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Yogmaya Temple — the oldest temple in Delhi, dedicated to the Yogmaya form of Devi, worshipped since the time of the Mahabharata",
       "Qutub area contains Anangpur — an ancient Hindu and Jain sacred site predating all medieval constructions",
     ],
+    history:
+      "Delhi has been the seat of power for Indian empires for over a thousand years, making it one of the most historically layered cities on Earth. The city of Indraprastha, mentioned in the Mahabharata, is considered Delhi's ancient precursor. The Delhi Sultanate (1206-1526) built the Qutb Minar (a UNESCO World Heritage Site), the world's tallest brick minaret. Delhi became a great modern capital when the British shifted from Calcutta to New Delhi in 1911, commissioning Edwin Lutyens and Herbert Baker to design a new imperial city.",
+    culturalRoots:
+      "Delhi's Zardozi embroidery tradition — gold and silver thread work on velvets and silks — has dressed royalty and Bollywood alike for centuries. The Chandni Chowk bazaar, established by Mughal Emperor Shah Jahan, remains one of the world's great craft markets where traditional artisans work alongside modern traders. Dilli Haat, a craft bazaar created to support artisans from all states, represents a modern celebration of India's craft traditions. Contemporary Delhi produces innovative fusion craft combining traditional skills with modern design.",
+    geographicalIdentity:
+      "Delhi occupies a strategic position on the Yamuna river in the Indo-Gangetic plain, at the transition between the Thar Desert to the west and the fertile Doab to the east. The ancient Aravalli ridge cuts through the city from southwest to northeast, providing the stone that built many of Delhi's monuments. The Yamuna flows through the city's eastern edge. As the National Capital Territory, Delhi is India's political, diplomatic, and administrative nucleus — a city that has been rebuilt on its own ruins multiple times throughout history.",
   },
   {
     name: "Jammu & Kashmir",
@@ -725,6 +926,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Kashmir — 'Kashyap-Mar' — named after the great Rishi Kashyap, who is said to have drained this valley to make it habitable. A land of supreme natural beauty and Saraswat Brahmin learning",
       "Sharada Peeth — the ancient seat of Maa Saraswati (Goddess of Learning) in Kashmir, where scholars came from across Bharat to study",
     ],
+    history:
+      "Jammu and Kashmir is one of India's most historically layered regions. The Kashmir Valley has been a centre of Sanskrit learning, Shaivite philosophy, and Buddhist scholarship since ancient times — the Trika Shaivism (Kashmir Shaivism) philosophical tradition is one of Hinduism's most sophisticated schools of thought. The Kashmir Valley's ancient temples and manuscripts represent an extraordinary spiritual heritage. The Dogra dynasty of Maharaja Gulab Singh unified the region and the state acceded to India in 1947.",
+    culturalRoots:
+      "Kashmiri Pashmina shawls — woven from the undercoat of the Changthangi goat — are the most luxurious textiles in the world, requiring hundreds of hours of weaving for a single shawl. Sozni embroidery, done with a fine needle on Pashmina, creates needle-thin floral designs of extraordinary refinement. Kani weaving uses coloured bobbins to interlace coloured patterns into the fabric without embroidery. Papier-mache art and walnut wood carving complete this extraordinary ensemble of luxury crafts that have made Kashmir renowned worldwide.",
+    geographicalIdentity:
+      "Jammu and Kashmir encompasses extraordinary geographical diversity — from the tropical foothills of Jammu through the Kashmir Valley (a paradise of snowfields, orchards, and saffron fields at 1,600 metres altitude) to the Pir Panjal and Zanskar ranges. Dal Lake and Wular Lake are the largest freshwater lakes in north India. The Jhelum and Chenab rivers water the valley. Saffron, walnut, almond, and apple orchards define the valley's agricultural identity.",
   },
   {
     name: "Ladakh",
@@ -741,6 +948,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Diskit Monastery — home to a towering statue of the Maitreya Buddha, the Buddha of the Future, overlooking the Nubra Valley",
       "Ladakh's Changpa nomads are the keepers of the Pashmina goat, source of the world's finest wool",
     ],
+    history:
+      "Ladakh — the Land of High Passes — was an independent Buddhist kingdom for over 900 years under the Namgyal dynasty, with its capital at Leh. The kingdom was a vital node on the ancient Silk Road connecting China, Central Asia, and India. Tibetan Buddhist culture permeates every aspect of Ladakhi life. The Zanskar valley and Nubra valley maintain especially pure traditions of Tibetan Buddhist monasticism. Ladakh became a separate Union Territory in 2019.",
+    culturalRoots:
+      "Thangka painting is central to Ladakhi Buddhist culture — intricate scroll paintings of Buddhist deities, mandalas, and cosmological diagrams created by trained monk-artists over months. Pashmina fibre from Changra goats herded by nomadic Changpa pastoralists at 4,500 metres altitude produces the world's finest cashmere. Butter sculptures (Torma) made for festivals are ephemeral masterworks of sacred art. The Hemis festival, featuring Cham (mask dance), is the largest monastic festival in the Himalayas.",
+    geographicalIdentity:
+      "Ladakh is a high-altitude cold desert — the Tibetan Plateau's western edge — occupying altitudes mostly between 3,000 and 5,000 metres. The Indus river, flowing from Tibet, runs through Leh. Pangong Lake at 4,350 metres is famous for its iridescent blue-green colour. The Karakoram range in the north includes K2 (world's second highest peak). Khardung La pass at 5,359 metres is among the world's highest motorable roads. The landscape is stark, moonlike, and breathtaking in its scale.",
   },
   {
     name: "Lakshadweep",
@@ -751,6 +964,12 @@ export const INDIAN_STATES: IndianState[] = [
     bgColor: "#2C2E73",
     type: "ut",
     pattern: "tribal",
+    history:
+      "Lakshadweep — a hundred thousand islands in Sanskrit — is India's smallest Union Territory, comprising 36 coral atolls in the Arabian Sea. The islands have been inhabited since prehistoric times, likely by people from the Kerala coast. Arab traders brought Islam to the islands in the 7th century CE, and today the islands are entirely Muslim. The Portuguese, Dutch, and Bidar Sultans all had interests in the islands before British control was established. The islands remain closely connected to Kerala culturally and linguistically.",
+    culturalRoots:
+      "Coir mat and rope weaving — using the fibre from coconut husks — is the primary craft tradition of the Lakshadweep islands. Coconut shell carving creates small decorative objects. Traditional outrigger canoe (odi) building using local timber reflects extraordinary maritime skill. The distinctive Lakshadweep dance forms — Kolkali (stick dance) and Parichakali — reflect the islands' unique cultural fusion of Kerala and Arab maritime influences.",
+    geographicalIdentity:
+      "Lakshadweep is an archipelago of 36 coral islands, of which only 10 are inhabited, situated in the Arabian Sea about 200-440 km off the Kerala coast. The islands are low-lying coral atolls — none rising more than 3 metres above sea level — making them extremely vulnerable to sea-level rise. The total land area is only 32 sq km. The surrounding coral reefs support extraordinary marine biodiversity including sea turtles, dolphins, manta rays, and hundreds of fish species.",
   },
   {
     name: "Puducherry",
@@ -766,6 +985,12 @@ export const INDIAN_STATES: IndianState[] = [
       "Sri Aurobindo Ashram — Puducherry is the sacred home of Sri Aurobindo, one of the greatest philosopher-saints and freedom fighters of modern Bharat, who developed the path of Integral Yoga",
       "Auroville — the universal city founded by the Mother, envisioned as a living experiment in human unity and divine consciousness — a tribute to India's role as the spiritual teacher of humanity",
     ],
+    history:
+      "Puducherry (formerly Pondicherry) has a layered history stretching from ancient Roman trade contacts to French colonial rule that lasted from 1674 to 1954. The Arikamedu site near Puducherry is an ancient Roman trading post, proving trade with the classical Mediterranean world 2,000 years ago. The French made Pondicherry the capital of French India and created a gracious colonial town with tree-lined boulevards. Sri Aurobindo Ghosh — freedom fighter, philosopher, and mystic — settled here in 1910 and transformed it into a global spiritual centre.",
+    culturalRoots:
+      "Sri Aurobindo Ashram — founded by Sri Aurobindo and The Mother — is one of the world's great spiritual communities, practising Integral Yoga and attracting seekers from across the globe. Auroville, the experimental township founded in 1968, is a living experiment in human unity and sustainable living, with the Matrimandir at its centre. Handloom cotton and printed fabric traditions — including hand-block printing on French-influenced designs — are the primary craft. Tamil temple traditions continue vigorously alongside the French cultural legacy.",
+    geographicalIdentity:
+      "Puducherry is a unique geographical entity — an enclave territory entirely surrounded by Tamil Nadu (except for the coast), with the Bay of Bengal on its eastern border. The city is divided into a French Quarter (Ville Blanche) near the sea and the Tamil Quarter (Ville Noire) to the west. The coastal location gives Puducherry a strong sea breeze and a unique microclimate. Auroville, the international township, is a remarkable landscape transformed by decades of afforestation, with the Matrimandir golden sphere at its geometric centre.",
   },
 ];
 
@@ -1022,7 +1247,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Ramdev Bhat",
     artisanStory:
       "Ramdev Ji belongs to the Bhat community of Rajasthan, hereditary puppeteers who have performed Kathputli shows for royalty and villagers alike for centuries.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/kathputli-puppets.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(30),
     category: "Handicrafts",
@@ -1046,7 +1271,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Heeralal Soni",
     artisanStory:
       "Heeralal is a master turban-tier from Jodhpur who has tied turbans for kings and film productions, preserving this living tradition of Rajasthani pride.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/rajasthani-pagdi.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(50),
     category: "Traditional Headgear",
@@ -1070,7 +1295,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Yusuf Khan Mochi",
     artisanStory:
       "Yusuf Khan's family has been crafting Mojari in the lanes of Jaipur's old bazaar for four generations, earning royal patronage and national recognition.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/mojari-footwear.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(40),
     category: "Bags & Accessories",
@@ -1094,7 +1319,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Vishnu Sharma",
     artisanStory:
       "Vishnu Sharma is a master miniaturist from Kishangarh, trained in the Nathdwara school of painting. His works take weeks of meticulous work to complete.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/rajasthani-miniature-painting.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(12),
     category: "Paintings & Prints",
@@ -1118,7 +1343,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Rina Dey",
     artisanStory:
       "Rina Dey from Birbhum, West Bengal, has been doing Kantha embroidery for 22 years, leading a cooperative of 40 rural women artisans who create these sarees.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/kantha-saree-bengal.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(15),
     category: "Handloom & Textiles",
@@ -1142,7 +1367,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Debashis Ghosh",
     artisanStory:
       "Debashis learnt the craft of hand-painting on leather at Visva-Bharati, Shantiniketan. His bags are a tribute to the artistic legacy of Gurudev Rabindranath Tagore.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/shantiniketan-leather-bag.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(25),
     category: "Bags & Accessories",
@@ -1165,7 +1390,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Malati Mondal",
     artisanStory:
       "Malati crafts terracotta jewellery in the Shantiniketan tradition — a style popularized by Rabindranath Tagore who wanted Indians to reconnect with earth and nature.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/terracotta-jewellery-bengal.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(40),
     category: "Jewelry",
@@ -1188,7 +1413,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Subal Das",
     artisanStory:
       "Subal Das from Birbhum crafts Dotaras for Baul singers — the wandering mystic musicians of Bengal who have sung of the divine for centuries.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/dotara-bengal.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(10),
     category: "Folk Musical Instruments",
@@ -1212,7 +1437,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Tenzin Dorje",
     artisanStory:
       "Tenzin Dorje trained at the Namgyal Institute of Tibetology in Sikkim and has been creating sacred Thangka paintings for monasteries and collectors for 15 years.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/thangka-sikkim.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(8),
     category: "Paintings & Prints",
@@ -1236,7 +1461,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Pema Lhamu",
     artisanStory:
       "Pema Lhamu is a Lepcha artisan from East Sikkim who weaves bamboo crafts using skills passed through her family for generations, maintaining ancient tribal patterns.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/sikkim-bamboo-basket.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(30),
     category: "Bamboo & Eco Crafts",
@@ -1259,7 +1484,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Sunita Lepcha",
     artisanStory:
       "Sunita Lepcha is part of a women's weaving cooperative in Sikkim preserving the ancient Lepcha textile traditions that have clothed the community for centuries.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/lepcha-shawl-sikkim.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(18),
     category: "Handloom & Textiles",
@@ -1283,7 +1508,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Devki Nanda",
     artisanStory:
       "Devki Nanda from Kullu valley has been knitting traditional Himachali caps for 20 years, supplying them to cultural organizations and folk dance groups.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/himachali-cap.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(60),
     category: "Traditional Headgear",
@@ -1306,7 +1531,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Kamla Thakur",
     artisanStory:
       "Kamla Thakur is a master weaver from Kullu whose shawls have been exhibited at national craft fairs and won her multiple state awards for excellence in weaving.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/kullu-shawl.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(25),
     category: "Handloom & Textiles",
@@ -1330,7 +1555,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Gopal Singh Negi",
     artisanStory:
       "Gopal Singh from Pauri Garhwal makes traditional Pahadi caps, preserving a craft that defines Uttarakhand's cultural identity in the hills.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/uttarakhand-topi.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(50),
     category: "Traditional Headgear",
@@ -1353,7 +1578,7 @@ export const SAMPLE_PRODUCTS = [
     artisanName: "Bhagwati Devi",
     artisanStory:
       "Bhagwati Devi from Chamoli weaves Ringaal bamboo crafts — a tradition of the Garhwal hills where Ringaal bamboo grows naturally and sustains artisan livelihoods.",
-    imageUrl: "",
+    imageUrl: "/assets/generated/ringaal-bamboo-uttarakhand.dim_600x700.jpg",
     additionalImages: [],
     stockQty: BigInt(35),
     category: "Bamboo & Eco Crafts",

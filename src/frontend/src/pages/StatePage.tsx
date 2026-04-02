@@ -6,7 +6,47 @@ import { ARTISANS } from "@/data/artisans";
 import { INDIAN_STATES, SAMPLE_PRODUCTS } from "@/data/indianStates";
 import { useProducts } from "@/hooks/useQueries";
 import { Link, useParams } from "@tanstack/react-router";
-import { ArrowLeft, MapPin } from "lucide-react";
+import { ArrowLeft, BookOpen, Landmark, MapPin, TreePine } from "lucide-react";
+import { motion } from "motion/react";
+
+function CultureCard({
+  icon,
+  title,
+  text,
+  accentColor,
+  delay,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  accentColor: string;
+  delay: number;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
+      className="bg-white rounded-2xl p-6 shadow-sm border border-amber-100 flex flex-col gap-4 hover:shadow-md transition-shadow"
+    >
+      <div
+        className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
+        style={{ backgroundColor: `${accentColor}22`, color: accentColor }}
+      >
+        {icon}
+      </div>
+      <div>
+        <h3
+          className="font-bold text-base text-charcoal mb-2 tracking-wide uppercase text-xs"
+          style={{ color: accentColor }}
+        >
+          {title}
+        </h3>
+        <p className="text-stone-700 leading-relaxed text-sm">{text}</p>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function StatePage() {
   const { stateName } = useParams({ from: "/state/$stateName" });
@@ -96,10 +136,61 @@ export default function StatePage() {
         </div>
       </div>
 
+      {/* Cultural Heritage Section */}
+      {(stateInfo?.history ||
+        stateInfo?.culturalRoots ||
+        stateInfo?.geographicalIdentity) && (
+        <div className="max-w-7xl mx-auto px-4 pt-10">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px flex-1 bg-amber-200" />
+              <h2 className="text-base font-bold text-amber-700 uppercase tracking-widest px-2">
+                Cultural Heritage
+              </h2>
+              <div className="h-px flex-1 bg-amber-200" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {stateInfo?.history && (
+                <CultureCard
+                  icon={<BookOpen size={22} />}
+                  title="Rich History"
+                  text={stateInfo.history}
+                  accentColor="#B45309"
+                  delay={0.1}
+                />
+              )}
+              {stateInfo?.culturalRoots && (
+                <CultureCard
+                  icon={<Landmark size={22} />}
+                  title="Cultural Roots"
+                  text={stateInfo.culturalRoots}
+                  accentColor="#7C3AED"
+                  delay={0.2}
+                />
+              )}
+              {stateInfo?.geographicalIdentity && (
+                <CultureCard
+                  icon={<TreePine size={22} />}
+                  title="Geographical Identity"
+                  text={stateInfo.geographicalIdentity}
+                  accentColor="#047857"
+                  delay={0.3}
+                />
+              )}
+            </div>
+          </motion.div>
+        </div>
+      )}
+
       {/* Sanskriti & Spiritual Heritage */}
       {stateInfo?.culturalHighlights &&
         stateInfo.culturalHighlights.length > 0 && (
-          <div className="max-w-7xl mx-auto px-4 pt-10">
+          <div className="max-w-7xl mx-auto px-4 pt-8">
             <div className="rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 p-6 shadow-sm">
               <h2 className="text-xl font-bold text-orange-700 mb-4 flex items-center gap-2">
                 \uD83D\uDD49\uFE0F Sanskriti &amp; Spiritual Heritage
